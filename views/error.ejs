@@ -1,0 +1,15 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="alert alert-danger text-center shadow-lg p-4 rounded" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="32" height="32" role="img" aria-label="Error:">
+                <use xlink:href="#exclamation-triangle-fill"/>
+            </svg>
+            <h2 class="fw-bold">Oops! Something Went Wrong</h2>
+            <h4 class="mt-3 text-danger">Error <%= err.statusCode %></h4>
+            <p class="lead"><%= err.message %></p>
+            <a href="/listings" class="btn btn-warning mt-3">Back To Home</a>
+        </div>
+    </div>
+</div>

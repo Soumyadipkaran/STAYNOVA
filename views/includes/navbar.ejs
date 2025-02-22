@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top shadow-sm">
+  <div class="container-fluid">
+    <!-- Brand Logo -->
+    <a class="navbar-brand" href="/listings" style="font-size: 1.5rem; color: #007BFF;">
+      <i class="fa-solid fa-house"></i>
+    </a>
+
+    <!-- Toggler for small screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!-- Left Side Links -->
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listings" style="background-color: #28a745; border-radius: 2cm; color: white !important; padding: 8px 16px; text-decoration: none; margin-right: 10px; transition: background-color 0.3s;">
+          <i class="fa-solid fa-globe" style="color: white !important;"></i> Explore
+        </a>
+
+        <a class="nav-link" href="/listings/new" style="background-color: #f93c3c; border-radius: 2cm; color: white !important; padding: 8px 16px; text-decoration: none; transition: background-color 0.3s;">
+          <i class="fa-solid fa-plus" style="color: white !important;"></i>
+          <span style="color: white !important;">Add new Listings</span>
+        </a>
+      </div>
+
+      <!-- Right Side Auth Links -->
+      <div class="navbar-nav ms-auto">
+        <% if(!currUser) { %>
+          <a class="nav-link" href="/signup" style="background-color: #007BFF; border-radius: 2cm; color: white !important; padding: 8px 16px; text-decoration: none; margin-right: 10px; transition: background-color 0.3s;">
+            <b>SignUp</b>
+          </a>
+          <a class="nav-link" href="/login" style="background-color: #28a745; border-radius: 2cm; color: white !important; padding: 8px 16px; text-decoration: none; transition: background-color 0.3s;">
+            <b>Login</b>
+          </a>
+        <% } %>
+
+        <% if(currUser) { %>
+          <a class="nav-link" href="/logout" style="background-color: #040303; border-radius: 2cm; color: white !important; padding: 8px 16px; text-decoration: none; transition: background-color 0.3s;">
+            <b>Logout</b>
+          </a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Additional CSS for hover effects -->
+<style>
+  .nav-link:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-brand:hover {
+    color: #0056b3 !important;
+  }
+
+  .navbar {
+    backdrop-filter: blur(10px);
+  }
+</style>

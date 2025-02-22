@@ -1,0 +1,33 @@
+<% if (success && success.length) { %>
+    <div id="successAlert" class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if (error && error.length) { %>
+    <div id="errorAlert" class="alert alert-danger alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= error %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<script>
+    function autoFadeOut(alertId) {
+        setTimeout(() => {
+            const alertElement = document.getElementById(alertId);
+            if (alertElement) {
+                alertElement.style.transition = "opacity 1s ease-out, filter 1s ease-out";  // Smooth fade-out and blur transition
+                alertElement.style.filter = "blur(5px)";
+                alertElement.style.opacity = "0";
+
+                // Remove the alert after fading out
+                setTimeout(() => alertElement.remove(), 1000);
+            }
+        }, 3500);  // Delay before fading out (5 seconds)
+    }
+
+    // Apply auto fade-out to success and error alerts
+    autoFadeOut('successAlert');
+    autoFadeOut('errorAlert');
+</script>
