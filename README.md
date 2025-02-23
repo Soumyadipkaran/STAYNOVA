@@ -47,4 +47,4 @@ MAP_TOKEN=your_map_api_token
 NODE_ENV=development
 
 # 📎 For More Info
-For more info, visit: 
+For more info, visit: https://www.linkedin.com/posts/soumyadip-karan-82559224b_staynova-activity-7299353470128599040-jneQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD3YFx0BwXHEsbvWe-gPvLWTxsJN5rbPFoQ
